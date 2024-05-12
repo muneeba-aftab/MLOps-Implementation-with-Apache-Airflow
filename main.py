@@ -44,19 +44,19 @@ with DAG(
     schedule_interval=timedelta(days=1),
 ) as dag:
 
-    extract_data = PythonOperator(
-        task_id='extract_data',
-        python_callable=scrapper,
+    extract_data_task = PythonOperator(
+        task_id='extract_data_task',
+        python_callable=data_scrapper,
     )
 
-    transform_data = PythonOperator(
-        task_id='transform_data',
+    transform_data_task = PythonOperator(
+        task_id='transform_data_task',
         python_callable=data_transformation,
     )
 
     store_data_task = PythonOperator(
-        task_id='store_data',
+        task_id='store_data_task',
         python_callable=store_data,
     )
 
-    extract_data >> transform_data >> store_data_task
+    extract_data_task >> transform_data_task >> store_data_task
