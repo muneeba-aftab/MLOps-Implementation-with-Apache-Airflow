@@ -6,7 +6,7 @@ Contact: i202656@nu.edu.pk
 MLOps Implementation with Apache Airflow (Implementation of Apache Airflow to automate data extraction, transformation, and version-controlled storage).
 
 ### Data Extraction
-- Got articles from BBC and Dawn using a tool called BeautifulSoup along with requests. Then, I only kept the important links and removed the ones I didn't need.
+- Got articles from BBC and Dawn using a tool called BeautifulSoup along with requests. 
 
 ### Data Transformation
 - Cleaned up the articles, getting rid of any messy HTML code, extra spaces, and making sure all the text looked the same.
